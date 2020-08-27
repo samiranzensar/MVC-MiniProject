@@ -1,0 +1,21 @@
+﻿@model BethanyPieShop.Models.ProductDetail
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2> Product Detail</h2>
+
+@using (Html.BeginForm("Index", "ProductDetails"))
+{
+    <div>
+        <img src="@Model.Image" />
+        <h4 style="float:left">@Model.ProductName</h4>
+        <h4 style="float:right">@Model.Price</h4>
+        <h5>@Model.ShortDescription</h5>
+        <h6>@Model.LongDescription</h6>
+    </div>
+    <button class="btn btn-primary">Add To Cart</button>
+}
+
+
+
